@@ -1,6 +1,143 @@
-* {
+:root {
+  --font-family-heading: "Montserrat", sans-serif;
+  --font-family-text: "Open Sans", sans-serif;
+  --color-primary: #c69963;
+  --color-primary-dark: #b28451;
+  --color-secondary: #101d2c;
+  --color-grey-light-1: #f9f7f6;
+  --color-grey-light-2: #aaa;
+  --color-grey-dark-1: #54483a;
+  --color-grey-dark-2: #6d5d4b; }
+
+*,
+*::before,
+*::after {
+  margin: 0;
   padding: 0;
-  margin: 0; }
+  box-sizing: inherit; }
 
 html {
-  font-size: 10px; }
+  box-sizing: border-box;
+  font-size: 62.5%; }
+  @media screen and (max-width: 62.5em) {
+    html {
+      font-size: 50%; } }
+
+body {
+  font-family: var(--font-family-text);
+  font-weight: 400;
+  line-height: 1.6; }
+
+.container {
+  display: grid;
+  grid-template-rows: 100vh min-content 40vw repeat(3, min-content);
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+@keyframes fade-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-3rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+.header {
+  grid-column: full-start / full-end;
+  background-image: linear-gradient(to bottom, rgba(198, 153, 99, 0.5), rgba(16, 29, 44, 0.8)), url(../assets/img/hero.jpg);
+  background-size: cover;
+  background-position: right center;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content 1fr; }
+  .header__content {
+    grid-row: 3 / 4;
+    padding: 0 20rem; }
+    .header__content--welcome-text {
+      font-size: 2.4rem;
+      color: var(--color-grey-light-2); }
+      .header__content--welcome-text-animated {
+        animation-name: fade-in;
+        animation-duration: 2s;
+        animation-timing-function: ease;
+        animation-iteration-count: 1;
+        backface-visibility: hidden; }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 5rem 20rem; }
+  .navbar__logo {
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--color-primary); }
+  .navbar__items {
+    display: flex;
+    justify-content: space-around;
+    color: var(--color-grey-light-2);
+    font-size: 2rem;
+    list-style: none;
+    letter-spacing: 1px; }
+    .navbar__items--1, .navbar__items--2, .navbar__items--3, .navbar__items--4 {
+      padding: 0 3rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative; }
+      .navbar__items--1:hover, .navbar__items--2:hover, .navbar__items--3:hover, .navbar__items--4:hover {
+        color: #ffffff; }
+        .navbar__items--1:hover::after, .navbar__items--2:hover::after, .navbar__items--3:hover::after, .navbar__items--4:hover::after {
+          opacity: 1; }
+      .navbar__items--1::after, .navbar__items--2::after, .navbar__items--3::after, .navbar__items--4::after {
+        content: "";
+        position: absolute;
+        width: 80%;
+        height: 2px;
+        background-color: #ffffff;
+        left: 50%;
+        bottom: -5px;
+        transform: translateX(-50%);
+        opacity: 0;
+        transition: opacity 0.3s ease; }
+
+.heading-1, .heading-3 {
+  font-family: var(--font-family-heading);
+  letter-spacing: 1px;
+  font-weight: 300; }
+
+.heading-1 {
+  font-size: 8rem;
+  color: var(--color-primary);
+  line-height: 140%; }
+  .heading-1--prefix {
+    font-weight: 500; }
+  .heading-1--animated {
+    animation-name: fade-in-left;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    backface-visibility: hidden; }
+
+.heading-3 {
+  font-size: 3rem;
+  line-height: 100%;
+  text-transform: uppercase; }
+  .heading-3--light {
+    color: var(--color-grey-light-2); }
+  .heading-3--dark {
+    color: var(--color-secondary); }
+  .heading-3--animated {
+    animation-name: fade-in;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    backface-visibility: hidden; }

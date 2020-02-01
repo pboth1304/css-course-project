@@ -1,0 +1,49 @@
+%heading {
+    font-family: var(--font-family-heading);
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+.heading {
+    &-1 {
+        @extend %heading;
+        font-size: 8rem;
+        color: var(--color-primary);
+        line-height: 140%;
+
+        &--prefix {
+            font-weight: 500;
+        }
+
+        &--animated {
+            animation-name: fade-in-left;
+            animation-duration: 1s;
+            animation-timing-function: ease;
+            animation-iteration-count: 1;
+            backface-visibility: hidden;
+        }
+    }
+
+    &-3 {
+        @extend %heading;
+        font-size: 3rem;
+        line-height: 100%;
+        text-transform: uppercase;
+
+        &--light {
+            color: var(--color-grey-light-2);
+        }
+
+        &--dark {
+            color: var(--color-secondary);
+        }
+
+        &--animated {
+            animation-name: fade-in;
+            animation-duration: 2s;
+            animation-timing-function: ease;
+            animation-iteration-count: 1;
+            backface-visibility: hidden;
+        }
+    }
+}

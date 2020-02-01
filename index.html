@@ -4,14 +4,48 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
         <link
-            href="https://fonts.googleapis.com/css?family=Montserrat:400,600|Open+Sans&display=swap"
+            href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600|Open+Sans&display=swap"
             rel="stylesheet"
         />
-        <link href="css/style.min.css" rel="stylesheet" />
-        <title>Document</title>
+        <link href="css/style.css" rel="stylesheet" />
+        <!-- Only in Prod: <link href="css/style.min.css" rel="stylesheet" /> -->
+        <title>The Grand Hotel</title>
     </head>
-    <body>
-        Test
+    <body class="container">
+        <header class="header">
+            <nav class="navbar">
+                <!-- <img src="" alt="The Grand Hotel Logo" class="navbar__logo" /> -->
+                <span class="navbar__logo">GH</span>
+                <ul class="navbar__items">
+                    <li class="navbar__items--1">
+                        <a href="#" class="navbar__items--link"> About us</a>
+                    </li>
+                    <li class="navbar__items--2">
+                        <a href="#" class="navbar__items--link">Rooms</a>
+                    </li>
+                    <li class="navbar__items--3">
+                        <a href="#" class="navbar__items--link">Location</a>
+                    </li>
+                    <li class="navbar__items--4">
+                        <a href="#" class="navbar__items--link">Gallery</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__content">
+                <h3 class="heading-3 heading-3--animated heading-3--light">
+                    Welcome to
+                </h3>
+                <h1 class="heading-1 heading-1--animated">
+                    <span class="heading-1--prefix">The</span> Grand Hotel
+                </h1>
+                <span
+                    class="header__content--welcome-text header__content--welcome-text-animated"
+                    >A place to experience and enjoy the life</span
+                >
+                <!-- Scroll Down icon -->
+            </div>
+        </header>
     </body>
 </html>
