@@ -54,13 +54,14 @@
         &--1,
         &--2,
         &--3,
-        &--4 {
+        &--4,
+        &--5 {
             padding: 0 3rem;
             cursor: pointer;
             transition: all 0.3s ease;
             position: relative;
 
-            &:hover {
+            &:hover:not(.navbar__items--cta) {
                 color: #ffffff;
 
                 &::after {
@@ -79,6 +80,18 @@
                 transform: translateX(-50%);
                 opacity: 0;
                 transition: opacity 0.3s ease;
+            }
+        }
+
+        &--cta {
+            color: var(--color-primary);
+            border: 1px solid var(--color-primary);
+            border-radius: 5px;
+            transition: all 0.3s ease;
+
+            &:hover {
+                color: var(--color-secondary);
+                background-color: var(--color-primary);
             }
         }
     }
