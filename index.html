@@ -4,14 +4,111 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
         <link
-            href="https://fonts.googleapis.com/css?family=Montserrat:400,600|Open+Sans&display=swap"
+            href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600|Open+Sans&display=swap"
             rel="stylesheet"
         />
-        <link href="css/style.min.css" rel="stylesheet" />
-        <title>Document</title>
+        <link
+            href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css"
+            rel="stylesheet"
+        />
+        <link href="css/style.css" rel="stylesheet" />
+        <!-- Only in Prod: <link href="css/style.min.css" rel="stylesheet" /> -->
+        <title>The Grand Hotel</title>
     </head>
-    <body>
-        Test
+    <body class="container">
+        <header class="header">
+            <nav class="navbar">
+                <!-- <img src="" alt="The Grand Hotel Logo" class="navbar__logo" /> -->
+                <span class="navbar__logo">GH</span>
+                <ul class="navbar__items">
+                    <li class="navbar__items--1">
+                        <a href="#" class="navbar__items--link"> About us</a>
+                    </li>
+                    <li class="navbar__items--2">
+                        <a href="#" class="navbar__items--link">Rooms</a>
+                    </li>
+                    <li class="navbar__items--3">
+                        <a href="#" class="navbar__items--link">Location</a>
+                    </li>
+                    <li class="navbar__items--4">
+                        <a href="#" class="navbar__items--link">Gallery</a>
+                    </li>
+                    <li class="navbar__items--5 navbar__items--cta">
+                        <a role="button">Book now</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__content">
+                <h3 class="heading-3 heading-3--animated heading-3--light">
+                    Welcome to
+                </h3>
+                <h1 class="heading-1 heading-1--animated">
+                    <span class="heading-1--prefix">The</span> Grand Hotel
+                </h1>
+                <span
+                    class="header__content--welcome-text header__content--welcome-text-animated"
+                    >A place to experience and enjoy the life</span
+                >
+                <!-- Scroll Down icon -->
+            </div>
+        </header>
+        <section class="about">
+            <h4 class="heading-4">The Grand Hotel</h4>
+            <h2 class="heading-2">About us</h2>
+            <p class="about__text">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+                takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
+                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+                eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+                sed diam voluptua. At vero eos et accusam et justo duo dolores
+                et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
+                est Lorem ipsum dolor sit amet.
+            </p>
+        </section>
+        <section class="amenities">
+            <div class="amenities__wrapper">
+                <div class="amenity">
+                    <div class="amenity__icon">
+                        <i class="icon ion-md-pin"></i>
+                    </div>
+                    <h5 class="heading-5">The best location</h5>
+                    <div class="amenity__text">
+                        At vero eos et accusam et justo duo dolores et ea rebum.
+                        Stet clita kasd gubergren, no sea takimata sanctus est
+                        Lorem ipsum dolor sit amet.
+                    </div>
+                </div>
+                <div class="amenity">
+                    <div class="amenity__icon">
+                        <i class="icon ion-md-eye"></i>
+                    </div>
+                    <h5 class="heading-5">Stunning View</h5>
+                    <div class="amenity__text">
+                        Consetetur sadipscing elitr, sed diam nonumy eirmod
+                        tempor invidunt ut labore et dolore magna aliquyam erat.
+                    </div>
+                </div>
+                <div class="amenity">
+                    <div class="amenity__icon">
+                        <i class="icon ion-md-star"></i>
+                    </div>
+                    <h5 class="heading-5">Happy Guests</h5>
+                    <div class="amenity__text">
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                        sed diam nonumy eirmod tempor invidunt ut labore et
+                        dolore magna aliquyam erat.
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="rooms">
+            <h4 class="heading-4">Luxury</h4>
+            <h2 class="heading-2">Our Rooms</h2>
+        </section>
     </body>
 </html>

@@ -1,0 +1,98 @@
+.header {
+    grid-column: full-start / full-end;
+    background-image: linear-gradient(
+            to bottom,
+            rgba(198, 153, 99, 0.5),
+            rgba(16, 29, 44, 0.8)
+        ),
+        url(../assets/img/hero.jpg);
+    background-size: cover;
+    background-position: right center;
+
+    display: grid;
+    grid-template-rows: min-content 1fr min-content 1fr;
+
+    &__content {
+        grid-row: 3 / 4;
+
+        padding: 0 20rem;
+
+        &--welcome-text {
+            font-size: 2.4rem;
+            color: var(--color-grey-light-2);
+
+            &-animated {
+                animation-name: fade-in;
+                animation-duration: 2s;
+                animation-timing-function: ease;
+                animation-iteration-count: 1;
+                backface-visibility: hidden;
+            }
+        }
+    }
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 5rem 20rem;
+
+    &__logo {
+        font-size: 2rem;
+        font-weight: 400;
+        color: var(--color-primary);
+    }
+
+    &__items {
+        display: flex;
+        justify-content: space-around;
+        color: var(--color-grey-light-2);
+        font-size: 2rem;
+        list-style: none;
+        letter-spacing: 1px;
+
+        &--1,
+        &--2,
+        &--3,
+        &--4,
+        &--5 {
+            padding: 0 3rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+
+            &:hover:not(.navbar__items--cta) {
+                color: #ffffff;
+
+                &::after {
+                    opacity: 1;
+                }
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 80%;
+                height: 2px;
+                background-color: #ffffff;
+                left: 50%;
+                bottom: -5px;
+                transform: translateX(-50%);
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+        }
+
+        &--cta {
+            color: var(--color-primary);
+            border: 1px solid var(--color-primary);
+            border-radius: 5px;
+            transition: all 0.3s ease;
+
+            &:hover {
+                color: var(--color-secondary);
+                background-color: var(--color-primary);
+            }
+        }
+    }
+}
