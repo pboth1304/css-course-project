@@ -24,16 +24,22 @@
                 <span class="navbar__logo">GH</span>
                 <ul class="navbar__items">
                     <li class="navbar__items--1">
-                        <a href="#" class="navbar__items--link"> About us</a>
+                        <a href="#about" class="navbar__items--link">
+                            About us</a
+                        >
                     </li>
                     <li class="navbar__items--2">
-                        <a href="#" class="navbar__items--link">Rooms</a>
+                        <a href="#amenities" class="navbar__items--link"
+                            >Amenities</a
+                        >
                     </li>
                     <li class="navbar__items--3">
-                        <a href="#" class="navbar__items--link">Location</a>
+                        <a href="#rooms" class="navbar__items--link">Rooms</a>
                     </li>
                     <li class="navbar__items--4">
-                        <a href="#" class="navbar__items--link">Gallery</a>
+                        <a href="#gallery" class="navbar__items--link"
+                            >Gallery</a
+                        >
                     </li>
                     <li class="navbar__items--5 navbar__items--cta">
                         <a role="button">Book now</a>
@@ -41,7 +47,7 @@
                 </ul>
             </nav>
             <div class="header__content">
-                <h3 class="heading-3 heading-3--animated heading-3--light">
+                <h3 class="heading-3 heading-3--animated heading-3--dark">
                     Welcome to
                 </h3>
                 <h1 class="heading-1 heading-1--animated">
@@ -54,7 +60,7 @@
                 <!-- Scroll Down icon -->
             </div>
         </header>
-        <section class="about">
+        <section class="about" id="about">
             <h4 class="heading-4">The Grand Hotel</h4>
             <h2 class="heading-2">About us</h2>
             <p class="about__text">
@@ -70,11 +76,11 @@
                 est Lorem ipsum dolor sit amet.
             </p>
         </section>
-        <section class="amenities">
+        <section class="amenities" id="amenities">
             <div class="amenities__wrapper">
                 <div class="amenity">
                     <div class="amenity__icon">
-                        <i class="icon ion-md-pin"></i>
+                        <i class="icon ion-ios-pin"></i>
                     </div>
                     <h5 class="heading-5">The best location</h5>
                     <div class="amenity__text">
@@ -85,7 +91,7 @@
                 </div>
                 <div class="amenity">
                     <div class="amenity__icon">
-                        <i class="icon ion-md-eye"></i>
+                        <i class="icon ion-ios-eye"></i>
                     </div>
                     <h5 class="heading-5">Stunning View</h5>
                     <div class="amenity__text">
@@ -95,7 +101,7 @@
                 </div>
                 <div class="amenity">
                     <div class="amenity__icon">
-                        <i class="icon ion-md-star"></i>
+                        <i class="icon ion-ios-star"></i>
                     </div>
                     <h5 class="heading-5">Happy Guests</h5>
                     <div class="amenity__text">
@@ -106,9 +112,128 @@
                 </div>
             </div>
         </section>
-        <section class="rooms">
-            <h4 class="heading-4">Luxury</h4>
-            <h2 class="heading-2">Our Rooms</h2>
+        <section class="rooms" id="rooms">
+            <div class="rooms__heading">
+                <h4 class="heading-4">Luxury</h4>
+                <h2 class="heading-2">Our Rooms</h2>
+            </div>
+            <div class="room room-1">
+                <img
+                    src="/assets/img/room-1.jpg"
+                    alt="Standard Room"
+                    class="room__picture"
+                />
+                <h3 class="heading-5">Standard Room</h3>
+                <ul class="room__features">
+                    <li class="room__features--1">
+                        <i class="icon ion-ios-expand"></i> 25qm
+                    </li>
+                    <li class="room__features--2">
+                        <i class="icon ion-logo-usd"></i>from 120
+                    </li>
+                </ul>
+                <a href="#" class="room__cta"
+                    >Book now<i class="icon ion-ios-arrow-round-forward"></i
+                ></a>
+            </div>
+            <div class="room room-2">
+                <img
+                    src="/assets/img/room-2.jpg"
+                    alt="Deluxe Room"
+                    class="room__picture"
+                />
+                <h3 class="heading-5">Deluxe Room</h3>
+                <ul class="room__features">
+                    <li class="room__features--1">50qm</li>
+                    <li class="room__features--2">
+                        <i class="icon ion-logo-usd"></i>from 150
+                    </li>
+                </ul>
+                <a href="#" class="room__cta"
+                    >Book now<i class="icon ion-ios-arrow-round-forward"></i
+                ></a>
+            </div>
+            <div class="room room-3">
+                <img
+                    src="/assets/img/room-3.jpg"
+                    alt="Junior Suite Room"
+                    class="room__picture"
+                />
+                <h3 class="heading-5">Junior Suite</h3>
+                <ul class="room__features">
+                    <li class="room__features--1">25qm</li>
+                    <li class="room__features--2">
+                        <i class="icon ion-logo-usd"></i>from 210
+                    </li>
+                </ul>
+                <a href="#" class="room__cta"
+                    >Book now<i class="icon ion-ios-arrow-round-forward"></i
+                ></a>
+            </div>
         </section>
+        <section class="gallery">
+            <figure class="gallery__item gallery__item--1">
+                <img
+                    src="assets/img/gallery-img-1.jpg"
+                    alt="Gallery image 1"
+                    class="gallery__img"
+                />
+            </figure>
+            <figure class="gallery__item gallery__item--2">
+                <img
+                    src="assets/img/gallery-img-2.jpg"
+                    alt="Gallery image 2"
+                    class="gallery__img"
+                />
+            </figure>
+            <figure class="gallery__item gallery__item--3">
+                <img
+                    src="assets/img/gallery-img-3.jpg"
+                    alt="Gallery image 3"
+                    class="gallery__img"
+                />
+            </figure>
+            <figure class="gallery__item gallery__item--4">
+                <img
+                    src="assets/img/gallery-img-4.jpg"
+                    alt="Gallery image 4"
+                    class="gallery__img"
+                />
+            </figure>
+            <figure class="gallery__item gallery__item--5">
+                <img
+                    src="assets/img/gallery-img-5.jpg"
+                    alt="Gallery image 5"
+                    class="gallery__img"
+                />
+            </figure>
+            <figure class="gallery__item gallery__item--6">
+                <img
+                    src="assets/img/gallery-img-6.jpg"
+                    alt="Gallery image 6"
+                    class="gallery__img"
+                />
+            </figure>
+            <figure class="gallery__item gallery__item--7">
+                <img
+                    src="assets/img/gallery-img-7.jpg"
+                    alt="Gallery image 7"
+                    class="gallery__img"
+                />
+            </figure>
+        </section>
+        <footer class="footer">
+            <ul class="footer__content">
+                <li class="footer__content-item"><a href="#">GH</a></li>
+                <li class="footer__content-item">
+                    <a href="#">Privacy Policy</a>
+                </li>
+                <li class="footer__content-item"><a href="#">Careers</a></li>
+                <li class="footer__content-item"><a href="#">Contact</a></li>
+            </ul>
+            <p class="copyright">
+                &copy; Copyright 2020 by Pascal Bothner.
+            </p>
+        </footer>
     </body>
 </html>
