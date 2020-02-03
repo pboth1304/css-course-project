@@ -119,7 +119,7 @@ a {
   grid-column: full-start / full-end;
   background-image: linear-gradient(to bottom, rgba(198, 153, 99, 0.5), rgba(16, 29, 44, 0.8)), url(../assets/img/hero.jpg);
   background-size: cover;
-  background-position: right center;
+  background-position: center center;
   display: grid;
   grid-template-rows: min-content 1fr min-content 1fr; }
   .header__content {
@@ -142,7 +142,8 @@ a {
         padding: 0 10rem; } }
     @media only screen and (max-width: 50em) {
       .header__content {
-        padding: 0 5rem; } }
+        padding: 0 5rem;
+        background-position-x: 45%; } }
 
 .navbar {
   display: flex;
