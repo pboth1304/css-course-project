@@ -28,6 +28,18 @@
                 animation-iteration-count: 1;
                 backface-visibility: hidden;
             }
+
+            @media only screen and (max-width: $bp-medium) {
+                font-size: 2rem;
+            }
+        }
+
+        @media only screen and (max-width: $bp-largest) {
+            padding: 0 10rem;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            padding: 0 5rem;
         }
     }
 }
@@ -35,6 +47,7 @@
 .navbar {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 5rem 20rem;
 
     &__logo {
@@ -81,6 +94,10 @@
                 opacity: 0;
                 transition: opacity 0.3s ease;
             }
+
+            @media only screen and (max-width: $bp-medium) {
+                display: none;
+            }
         }
 
         &--cta {
@@ -93,6 +110,28 @@
                 color: var(--color-secondary);
                 background-color: var(--color-primary);
             }
+
+            @media only screen and (max-width: $bp-medium) {
+                display: none;
+            }
         }
+
+        &--menu {
+            font-size: 4rem;
+            display: none;
+            color: #ffffff;
+
+            @media only screen and (max-width: $bp-medium) {
+                display: inline-block;
+            }
+        }
+    }
+
+    @media only screen and (max-width: $bp-largest) {
+        padding: 4rem 10rem;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 3rem 5rem;
     }
 }
