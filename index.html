@@ -13,8 +13,8 @@
             href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css"
             rel="stylesheet"
         />
-        <link href="css/style.css" rel="stylesheet" />
-        <!-- Only in Prod: <link href="css/style.min.css" rel="stylesheet" /> -->
+        <!-- Only for Dev: <link href="css/style.css" rel="stylesheet" /> -->
+        <link href="css/style.min.css" rel="stylesheet" />
         <title>The Grand Hotel</title>
     </head>
     <body class="container">
@@ -43,6 +43,9 @@
                     </li>
                     <li class="navbar__items--5 navbar__items--cta">
                         <a role="button">Book now</a>
+                    </li>
+                    <li class="navbar__items--menu">
+                        <i class="icon ion-md-menu"></i>
                     </li>
                 </ul>
             </nav>
@@ -118,11 +121,13 @@
                 <h2 class="heading-2">Our Rooms</h2>
             </div>
             <div class="room room-1">
-                <img
-                    src="/assets/img/room-1.jpg"
-                    alt="Standard Room"
-                    class="room__picture"
-                />
+                <div class="image-wrapper">
+                    <img
+                        src="/assets/img/room-1.jpg"
+                        alt="Standard Room"
+                        class="room__picture"
+                    />
+                </div>
                 <h3 class="heading-5">Standard Room</h3>
                 <ul class="room__features">
                     <li class="room__features--1">
@@ -137,11 +142,13 @@
                 ></a>
             </div>
             <div class="room room-2">
-                <img
-                    src="/assets/img/room-2.jpg"
-                    alt="Deluxe Room"
-                    class="room__picture"
-                />
+                <div class="image-wrapper">
+                    <img
+                        src="/assets/img/room-2.jpg"
+                        alt="Deluxe Room"
+                        class="room__picture"
+                    />
+                </div>
                 <h3 class="heading-5">Deluxe Room</h3>
                 <ul class="room__features">
                     <li class="room__features--1">50qm</li>
@@ -154,11 +161,13 @@
                 ></a>
             </div>
             <div class="room room-3">
-                <img
-                    src="/assets/img/room-3.jpg"
-                    alt="Junior Suite Room"
-                    class="room__picture"
-                />
+                <div class="image-wrapper">
+                    <img
+                        src="/assets/img/room-3.jpg"
+                        alt="Junior Suite Room"
+                        class="room__picture"
+                    />
+                </div>
                 <h3 class="heading-5">Junior Suite</h3>
                 <ul class="room__features">
                     <li class="room__features--1">25qm</li>

@@ -1,3 +1,4 @@
+// Placeholder Selectors
 %heading {
     font-family: var(--font-family-heading);
     letter-spacing: 1px;
@@ -21,6 +22,10 @@
             animation-timing-function: ease;
             animation-iteration-count: 1;
             backface-visibility: hidden;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            font-size: 6rem;
         }
     }
 
@@ -52,6 +57,10 @@
             animation-timing-function: ease;
             animation-iteration-count: 1;
             backface-visibility: hidden;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            font-size: 2.5rem;
         }
     }
 
