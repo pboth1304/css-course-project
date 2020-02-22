@@ -1,0 +1,145 @@
+.header {
+    &--rooms {
+        background-image: none;
+        display: grid;
+        grid-template-columns: 50vw 50vw;
+
+        @media only screen and (max-width: $bp-medium) {
+            grid-template-columns: 1fr;
+            grid-template-rows: 50vh 50vh;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            grid-template-rows: auto min-content;
+
+            .heading-1 {
+                font-size: 3rem;
+            }
+        }
+
+        .btn--cta {
+            grid-row: 3 / 4;
+            justify-self: end;
+            align-self: flex-end;
+            margin-bottom: 4rem;
+            animation-name: fade-in;
+            animation-duration: 2s;
+            animation-timing-function: ease;
+            animation-iteration-count: 1;
+            backface-visibility: hidden;
+
+            @media only screen and (max-width: $bp-medium) {
+                font-size: 2.5rem;
+            }
+
+            @media only screen and (max-width: $bp-small) {
+                text-align: center;
+                justify-self: stretch;
+                margin-top: 1rem;
+            }
+        }
+
+        .navbar {
+            grid-column: 1 / -1;
+            grid-row: 1 / 2;
+            z-index: 999999;
+            padding: 5rem 8rem;
+
+            @media only screen and (max-width: $bp-medium) {
+                align-self: flex-start;
+                padding: 5rem 4rem;
+            }
+
+            &__items {
+                color: #ffffff;
+
+                &--back {
+                    transition: all 0.3s ease;
+
+                    .navbar__items--link {
+                        display: flex;
+                        align-items: center;
+
+                        .icon {
+                            font-size: 3rem;
+                            margin-right: 2rem;
+                        }
+                    }
+
+                    &:hover {
+                        color: var(--color-grey-light-2);
+                    }
+                }
+            }
+        }
+
+        .header__content {
+            padding: 0 5rem;
+
+            &-heading {
+                grid-row: 2 / 3;
+            }
+
+            &--left {
+                grid-column: 1 / 2;
+                grid-row: 1 / -1;
+                background-image: linear-gradient(
+                        to bottom,
+                        rgba(198, 153, 99, 0.5),
+                        rgba(16, 29, 44, 0.8)
+                    ),
+                    url("../assets/img/room-1-large.jpg");
+                background-size: cover;
+                background-position: center center;
+
+                @media only screen and (max-width: $bp-medium) {
+                    grid-row: 1 / 2;
+                }
+            }
+
+            &--right {
+                background-color: var(--color-secondary);
+                grid-row: 1 / -1;
+                grid-column: 2 / 3;
+
+                display: grid;
+                grid-template-rows: 1fr min-content 1fr;
+
+                @media only screen and (max-width: $bp-medium) {
+                    grid-column: 1 / 2;
+                    grid-row: 2 / 3;
+                }
+            }
+
+            &--welcome-text {
+                font-size: 1.8rem;
+            }
+        }
+    }
+}
+
+.room-facts-list {
+    list-style: none;
+    padding: 2rem 0;
+    animation-name: fade-in;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    backface-visibility: hidden;
+
+    &__item {
+        font-size: 1.6rem;
+        font-weight: 400;
+        color: var(--color-grey-light-2);
+
+        &--highlight {
+            margin-left: 1rem;
+            font-size: 1.8rem;
+            color: var(--color-primary);
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
+}

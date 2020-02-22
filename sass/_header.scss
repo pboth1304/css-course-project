@@ -5,7 +5,7 @@
             rgba(198, 153, 99, 0.5),
             rgba(16, 29, 44, 0.8)
         ),
-        url(../assets/img/hero.jpg);
+        url("../assets/img/hero.jpg");
     background-size: cover;
     background-position: center center;
 
@@ -102,15 +102,7 @@
         }
 
         &--cta {
-            color: var(--color-primary);
-            border: 1px solid var(--color-primary);
-            border-radius: 5px;
-            transition: all 0.3s ease;
-
-            &:hover {
-                color: var(--color-secondary);
-                background-color: var(--color-primary);
-            }
+            padding: 0;
 
             @media only screen and (max-width: $bp-medium) {
                 display: none;
