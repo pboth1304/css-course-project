@@ -367,6 +367,15 @@ a {
   background-image: none;
   display: grid;
   grid-template-columns: 50vw 50vw; }
+  @media only screen and (max-width: 50em) {
+    .header--rooms {
+      grid-template-columns: 1fr;
+      grid-template-rows: 50vh 50vh; } }
+  @media only screen and (max-width: 37.5em) {
+    .header--rooms {
+      grid-template-rows: auto min-content; }
+      .header--rooms .heading-1 {
+        font-size: 3rem; } }
   .header--rooms .btn--cta {
     grid-row: 3 / 4;
     justify-self: end;
@@ -377,11 +386,23 @@ a {
     animation-timing-function: ease;
     animation-iteration-count: 1;
     backface-visibility: hidden; }
+    @media only screen and (max-width: 50em) {
+      .header--rooms .btn--cta {
+        font-size: 2.5rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .header--rooms .btn--cta {
+        text-align: center;
+        justify-self: stretch;
+        margin-top: 1rem; } }
   .header--rooms .navbar {
     grid-column: 1 / -1;
     grid-row: 1 / 2;
     z-index: 999999;
     padding: 5rem 8rem; }
+    @media only screen and (max-width: 50em) {
+      .header--rooms .navbar {
+        align-self: flex-start;
+        padding: 5rem 4rem; } }
     .header--rooms .navbar__items {
       color: #ffffff; }
       .header--rooms .navbar__items--back {
@@ -400,16 +421,23 @@ a {
       grid-row: 2 / 3; }
     .header--rooms .header__content--left {
       grid-column: 1 / 2;
+      grid-row: 1 / -1;
       background-image: linear-gradient(to bottom, rgba(198, 153, 99, 0.5), rgba(16, 29, 44, 0.8)), url("../assets/img/room-1-large.jpg");
       background-size: cover;
       background-position: center center; }
+      @media only screen and (max-width: 50em) {
+        .header--rooms .header__content--left {
+          grid-row: 1 / 2; } }
     .header--rooms .header__content--right {
       background-color: var(--color-secondary);
+      grid-row: 1 / -1;
       grid-column: 2 / 3;
       display: grid;
       grid-template-rows: 1fr min-content 1fr; }
-    .header--rooms .header__content--right, .header--rooms .header__content--left {
-      grid-row: 1 / -1; }
+      @media only screen and (max-width: 50em) {
+        .header--rooms .header__content--right {
+          grid-column: 1 / 2;
+          grid-row: 2 / 3; } }
     .header--rooms .header__content--welcome-text {
       font-size: 1.8rem; }
 

@@ -4,6 +4,19 @@
         display: grid;
         grid-template-columns: 50vw 50vw;
 
+        @media only screen and (max-width: $bp-medium) {
+            grid-template-columns: 1fr;
+            grid-template-rows: 50vh 50vh;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            grid-template-rows: auto min-content;
+
+            .heading-1 {
+                font-size: 3rem;
+            }
+        }
+
         .btn--cta {
             grid-row: 3 / 4;
             justify-self: end;
@@ -14,6 +27,16 @@
             animation-timing-function: ease;
             animation-iteration-count: 1;
             backface-visibility: hidden;
+
+            @media only screen and (max-width: $bp-medium) {
+                font-size: 2.5rem;
+            }
+
+            @media only screen and (max-width: $bp-small) {
+                text-align: center;
+                justify-self: stretch;
+                margin-top: 1rem;
+            }
         }
 
         .navbar {
@@ -21,6 +44,11 @@
             grid-row: 1 / 2;
             z-index: 999999;
             padding: 5rem 8rem;
+
+            @media only screen and (max-width: $bp-medium) {
+                align-self: flex-start;
+                padding: 5rem 4rem;
+            }
 
             &__items {
                 color: #ffffff;
@@ -54,6 +82,7 @@
 
             &--left {
                 grid-column: 1 / 2;
+                grid-row: 1 / -1;
                 background-image: linear-gradient(
                         to bottom,
                         rgba(198, 153, 99, 0.5),
@@ -62,19 +91,24 @@
                     url("../assets/img/room-1-large.jpg");
                 background-size: cover;
                 background-position: center center;
+
+                @media only screen and (max-width: $bp-medium) {
+                    grid-row: 1 / 2;
+                }
             }
 
             &--right {
                 background-color: var(--color-secondary);
+                grid-row: 1 / -1;
                 grid-column: 2 / 3;
 
                 display: grid;
                 grid-template-rows: 1fr min-content 1fr;
-            }
 
-            &--right,
-            &--left {
-                grid-row: 1 / -1;
+                @media only screen and (max-width: $bp-medium) {
+                    grid-column: 1 / 2;
+                    grid-row: 2 / 3;
+                }
             }
 
             &--welcome-text {
