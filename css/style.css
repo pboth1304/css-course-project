@@ -41,6 +41,17 @@ a {
 .image-wrapper {
   overflow: hidden; }
 
+.btn--cta {
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  padding: 0 3rem;
+  font-size: 2rem; }
+  .btn--cta:hover {
+    color: var(--color-secondary);
+    background-color: var(--color-primary); }
+
 @keyframes fade-in-left {
   0% {
     opacity: 0;
@@ -117,7 +128,7 @@ a {
 
 .header {
   grid-column: full-start / full-end;
-  background-image: linear-gradient(to bottom, rgba(198, 153, 99, 0.5), rgba(16, 29, 44, 0.8)), url(../assets/img/hero.jpg);
+  background-image: linear-gradient(to bottom, rgba(198, 153, 99, 0.5), rgba(16, 29, 44, 0.8)), url("../assets/img/hero.jpg");
   background-size: cover;
   background-position: center center;
   display: grid;
@@ -185,13 +196,7 @@ a {
         .navbar__items--1, .navbar__items--2, .navbar__items--3, .navbar__items--4, .navbar__items--5 {
           display: none; } }
     .navbar__items--cta {
-      color: var(--color-primary);
-      border: 1px solid var(--color-primary);
-      border-radius: 5px;
-      transition: all 0.3s ease; }
-      .navbar__items--cta:hover {
-        color: var(--color-secondary);
-        background-color: var(--color-primary); }
+      padding: 0; }
       @media only screen and (max-width: 50em) {
         .navbar__items--cta {
           display: none; } }
@@ -357,3 +362,72 @@ a {
   color: var(--color-grey-light-1);
   font-size: 1.5rem;
   font-weight: 300; }
+
+.header--rooms {
+  background-image: none;
+  display: grid;
+  grid-template-columns: 50vw 50vw; }
+  .header--rooms .btn--cta {
+    grid-row: 3 / 4;
+    justify-self: end;
+    align-self: flex-end;
+    margin-bottom: 4rem;
+    animation-name: fade-in;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    backface-visibility: hidden; }
+  .header--rooms .navbar {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    z-index: 999999;
+    padding: 5rem 8rem; }
+    .header--rooms .navbar__items {
+      color: #ffffff; }
+      .header--rooms .navbar__items--back {
+        transition: all 0.3s ease; }
+        .header--rooms .navbar__items--back .navbar__items--link {
+          display: flex;
+          align-items: center; }
+          .header--rooms .navbar__items--back .navbar__items--link .icon {
+            font-size: 3rem;
+            margin-right: 2rem; }
+        .header--rooms .navbar__items--back:hover {
+          color: var(--color-grey-light-2); }
+  .header--rooms .header__content {
+    padding: 0 5rem; }
+    .header--rooms .header__content-heading {
+      grid-row: 2 / 3; }
+    .header--rooms .header__content--left {
+      grid-column: 1 / 2;
+      background-image: linear-gradient(to bottom, rgba(198, 153, 99, 0.5), rgba(16, 29, 44, 0.8)), url("../assets/img/room-1-large.jpg");
+      background-size: cover;
+      background-position: center center; }
+    .header--rooms .header__content--right {
+      background-color: var(--color-secondary);
+      grid-column: 2 / 3;
+      display: grid;
+      grid-template-rows: 1fr min-content 1fr; }
+    .header--rooms .header__content--right, .header--rooms .header__content--left {
+      grid-row: 1 / -1; }
+    .header--rooms .header__content--welcome-text {
+      font-size: 1.8rem; }
+
+.room-facts-list {
+  list-style: none;
+  padding: 2rem 0;
+  animation-name: fade-in;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+  backface-visibility: hidden; }
+  .room-facts-list__item {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--color-grey-light-2); }
+    .room-facts-list__item--highlight {
+      margin-left: 1rem;
+      font-size: 1.8rem;
+      color: var(--color-primary); }
+    .room-facts-list__item:not(:last-child) {
+      margin-bottom: 1rem; }

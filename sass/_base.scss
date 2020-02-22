@@ -54,18 +54,6 @@ body {
             [col-start] minmax(min-content, 14rem) [col-end]
         )
         [center-end] minmax(6rem, 1fr) [full-end];
-
-    // @media only screen and (max-width: $bp-large) {
-    //     grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
-    //     grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(
-    //             8,
-    //             [col-start] minmax(min-content, 14rem) [col-end]
-    //         ) [center-end] minmax(6rem, 1fr) [full-end];
-    // }
-
-    // @media only screen and (max-width: $bp-medium) {
-    //     grid-template-rows: 6rem calc(100vh - 6rem);
-    // }
 }
 
 a {
@@ -75,4 +63,18 @@ a {
 
 .image-wrapper {
     overflow: hidden;
+}
+
+.btn--cta {
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    padding: 0 3rem;
+    font-size: 2rem;
+
+    &:hover {
+        color: var(--color-secondary);
+        background-color: var(--color-primary);
+    }
 }
