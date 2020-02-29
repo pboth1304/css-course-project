@@ -1,4 +1,31 @@
 .header {
+    &--standard-room .header__content--left {
+        background-image: linear-gradient(
+                to bottom,
+                rgba(198, 153, 99, 0.5),
+                rgba(16, 29, 44, 0.8)
+            ),
+            url("../assets/img/room-1-large.jpg");
+    }
+
+    &--deluxe-room .header__content--left {
+        background-image: linear-gradient(
+                to bottom,
+                rgba(198, 153, 99, 0.5),
+                rgba(16, 29, 44, 0.8)
+            ),
+            url("../assets/img/room-2-large.jpg");
+    }
+
+    &--junior-suite .header__content--left {
+        background-image: linear-gradient(
+                to bottom,
+                rgba(198, 153, 99, 0.5),
+                rgba(16, 29, 44, 0.8)
+            ),
+            url("../assets/img/room-3-large.jpg");
+    }
+
     &--rooms {
         background-image: none;
         display: grid;
@@ -83,12 +110,6 @@
             &--left {
                 grid-column: 1 / 2;
                 grid-row: 1 / -1;
-                background-image: linear-gradient(
-                        to bottom,
-                        rgba(198, 153, 99, 0.5),
-                        rgba(16, 29, 44, 0.8)
-                    ),
-                    url("../assets/img/room-1-large.jpg");
                 background-size: cover;
                 background-position: center center;
 
