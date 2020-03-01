@@ -71,6 +71,8 @@
             grid-row: 1 / 2;
             z-index: 999999;
             padding: 5rem 8rem;
+            display: flex;
+            justify-content: space-between;
 
             @media only screen and (max-width: $bp-medium) {
                 align-self: flex-start;
